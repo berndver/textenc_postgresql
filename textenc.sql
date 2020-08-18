@@ -87,18 +87,3 @@ CREATE OPERATOR CLASS textenc_ops
         OPERATOR        4       >= ,
         OPERATOR        5       > ,
         FUNCTION        1       textenc_compare(textenc, textenc);
-
-CREATE TABLE textenc_test (
-    id serial PRIMARY KEY,
-    content_crypted textenc,
-    content text
-);
-
-CREATE TABLE text_test (
-    id serial PRIMARY KEY,
-    content_clear text,
-    content text
-);
-
--- CREATE INDEX test_index ON textenc_test
---    USING btree(content textenc_ops);
